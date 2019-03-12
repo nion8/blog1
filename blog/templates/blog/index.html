@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>idext page</title>
-</head>
-<body>
-<h1>Привет Мир!</h1>
-<h2>Вася</h2>
-<p>
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+            post list
+        {% endblock %}
+
+{% block content %}
     {% for name in names %}
     <p>
     {{ name }}
     {% endfor %}
 </p>
-</p>
-</body>
-</html>
+{% endblock %}
